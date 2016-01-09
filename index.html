@@ -11,6 +11,16 @@
 	<script src="app/controllers/dataController.js"></script>
 </head>
 <body ng-app="app">
+	<div class="container">
+		<div class="hero">
+			<h1>Toronto Road Closures <small>Be informed about closures in the Toronto region.</small></h1>
+			<p class="lead">This is an open source project. Contribute <a href="http://github.com/kshvmdn/toronto-road-closures">here</a>.</p>
+		</div>
+		<div class="content" ng-controller="DataCtrl">
+			<div ng-repeat="closure in data['Closure']">
+				{{ closure.Name }}
+			</div>  
+		</div>
 	</div>
 </body>
 </html>
