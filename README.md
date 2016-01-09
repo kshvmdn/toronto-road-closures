@@ -1,5 +1,5 @@
 # Toronto Road Closures
-Web app that informs users of road closures in the Toronto region. Uses data from [Open Data](http://www1.toronto.ca/wps/portal/contentonly?vgnextoid=9e56e03bb8d1e310VgnVCM10000071d60f89RCRD) Toronto.
+Web app that informs users of road closures in the Toronto region. Built with Angular, uses data from [Open Data](http://www1.toronto.ca/wps/portal/contentonly?vgnextoid=9e56e03bb8d1e310VgnVCM10000071d60f89RCRD) Toronto.
 
 
 ### Source
