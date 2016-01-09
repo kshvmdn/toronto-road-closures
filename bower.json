@@ -1,0 +1,22 @@
+{
+  "name": "Toronto Road Closures",
+  "version": "0.0.0",
+  "homepage": "https://github.com/kshvmdn/toronto-road-closures",
+  "authors": [
+    "Kashav Madan <kshvmdn@gmail.com>"
+  ],
+  "description": "Web app to determine closed roads in the Toronto region.",
+  "main": "app.js",
+  "license": "Apache",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.8",
+    "bootstrap": "~3.3.6"
+  }
+}
