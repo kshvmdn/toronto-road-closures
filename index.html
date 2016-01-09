@@ -35,6 +35,7 @@
 						<div class="panel-body">
 							<p class="lead">{{ closure.Description }}</p>
 							<p>{{ closure.Road }}, {{ closure.District }} | View on <a href="http://maps.google.com/maps?q={{ closure.Latitude }},{{ closure.Longitude }}" target="_blank">Google Maps</a>.</p>
+							<p>{{ closure.WorkPeriod | capitalizeFirst }} work period. Started <mark>{{ closure.StartTime | date:'medium' }}</mark>, will be complete <mark>{{ closure.EndTime | date:'medium' }}</mark>.
 						</div>
 						<div class="panel-footer">
 							Last updated on {{ closure.LastUpdated | date:'medium' }}.

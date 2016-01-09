@@ -1,4 +1,4 @@
-angular.module('app').controller('DataCtrl', function($scope, $http) {
+app.controller('DataCtrl', function($scope, $http) {
 
   $scope.currentPage = 1;
   $scope.numPerPage = 10;
