@@ -7,6 +7,8 @@
 	<link rel="stylesheet" href="public/stylesheets/style.css">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 	<script src="public/components/angular/angular.js"></script>
+	<script src="public/components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
 	<script src="app/app.js"></script>
 	<script src="app/controllers/dataController.js"></script>
 </head>
@@ -17,9 +19,21 @@
 			<p class="lead">This is an open source project. Contribute <a href="http://github.com/kshvmdn/toronto-road-closures">here</a>.</p>
 		</div>
 		<div class="content" ng-controller="DataCtrl">
-			<div ng-repeat="closure in data['Closure']">
-				{{ closure.Name }}
-			</div>  
+			<h3>Current closures <small>{{ closures.length }} total</small></h3>
+			<div class="closures">
+				<div ng-repeat="closure in closures | limitTo:numPerPage:(currentPage - 1) * numPerPage">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">{{ closure.Name }}</h3>
+						</div>
+						<div class="panel-body">
+							<p>{{ closure.Description }}</p>
+							<p>View location on <a href="http://maps.google.com/maps?q={{ closure.Latitude }},{{ closure.Longitude }}">Google Maps</a>.</p>
+						</div>
+					</div> 
+				</div>
+			</div>
+			<uib-pagination total-items="closures.length" ng-model="currentPage" max-size="maxSize" items-per-page="numPerPage" class="pagination-sm" boundary-link-numbers="true" rotate="false" boundary-links="true" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></uib-pagination>
 		</div>
 	</div>
 </body>
